@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+ <LinearLayout
+     android:id="@+id/llMainContainer"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:padding="20dp"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="30dp">
+     <LinearLayout
+         android:layout_weight="1"
+         android:layout_width="match_parent"
+         android:layout_height="0dp">
+         <TextView
+             android:id="@+id/tvFirstName"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="First Name"/>
+         <EditText
+             android:id="@+id/etFirstName"
+         android:layout_weight="4"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:hint="Enter First Name"/>
+     </LinearLayout>
+     <LinearLayout
+         android:layout_weight="1"
+         android:layout_width="match_parent"
+         android:layout_height="0dp">
+         <TextView
+             android:id="@+id/tvSurName"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="SurName"/>
+         <EditText
+             android:id="@+id/etSurName"
+             android:layout_weight="4"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:hint="Enter SurName"/>
+     </LinearLayout>
+     <LinearLayout
+         android:layout_weight="1"
+         android:layout_width="match_parent"
+         android:layout_height="0dp">
+         <TextView
+             android:id="@+id/tvMarks"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:text="Marks"/>
+         <EditText
+             android:id="@+id/etMarks"
+             android:layout_weight="4"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:hint="Enter Marks"/>
+     </LinearLayout>
+ </LinearLayout>
+    <Button
+        android:id="@+id/btnAddData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Add Data"
+        android:textSize="20sp"
+        android:layout_below="@+id/llMainContainer"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+    <Button
+    android:id="@+id/btnViewAllData"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="ViewAll"
+    android:textSize="20sp"
+    android:layout_below="@+id/llMainContainer"
+        android:layout_toRightOf="@+id/btnAddData"
+        android:layout_marginLeft="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp"
+    android:textStyle="bold" />
+</RelativeLayout>
