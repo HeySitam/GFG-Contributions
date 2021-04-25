@@ -1,193 +1,80 @@
 package com.sitamrock11.flexboxlayout
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.transition.Visibility
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.flexbox.*
 import com.google.android.material.appbar.MaterialToolbar
+import com.sitamrock11.flexboxlayout.fragments.*
 import io.github.yavski.fabspeeddial.FabSpeedDial
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter
 
 class MainActivity : AppCompatActivity(), Toolbar.OnMenuItemClickListener {
-    lateinit var flexboxLayout: FlexboxLayout
-    lateinit var btnFlexDirection: FabSpeedDial
-    lateinit var btnFlexWrap: FabSpeedDial
-    lateinit var btnJustifyContent: FabSpeedDial
-    lateinit var btnAlignItem: FabSpeedDial
-    lateinit var btnAlignContent: FabSpeedDial
+    lateinit var imgPlay: ImageView
+    lateinit var txtPlay: TextView
     lateinit var topAppBar: MaterialToolbar
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        flexboxLayout = findViewById(R.id.flexbox_layout)
         init()
         setSupportActionBar(topAppBar)
         topAppBar.setOnMenuItemClickListener(this)
-        flexDirection()
-        flexWrap()
-        justifyContent()
-        alignItem()
-        alignContent()
-
-    }
-
-    private fun alignContent() {
-        btnAlignContent.setMenuListener(object : SimpleMenuListenerAdapter() {
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                alignContentItemSelected(menuItem)
-                return true
-            }
-        })
-    }
-
-    private fun alignContentItemSelected(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.flex_start_content -> {
-                flexboxLayout.alignContent = AlignContent.FLEX_START
-            }
-            R.id.flex_end_content -> {
-                flexboxLayout.alignContent = AlignContent.FLEX_END
-            }
-            R.id.center_content -> {
-                flexboxLayout.alignContent = AlignContent.CENTER
-            }
-            R.id.space_between_content -> {
-                flexboxLayout.alignContent = AlignContent.SPACE_BETWEEN
-            }
-            R.id.space_around_content -> {
-                flexboxLayout.alignContent = AlignContent.SPACE_AROUND
-            }
+        txtPlay.setOnClickListener{
+            supportActionBar?.openOptionsMenu()
         }
-    }
-
-    private fun alignItem() {
-        btnAlignItem.setMenuListener(object : SimpleMenuListenerAdapter() {
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                alignItemSelected(menuItem)
-                return true
-            }
-        })
-    }
-
-    private fun alignItemSelected(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.flex_start_align -> {
-                flexboxLayout.alignItems = AlignItems.FLEX_START
-            }
-            R.id.flex_end_align -> {
-                flexboxLayout.alignItems = AlignItems.FLEX_END
-            }
-            R.id.center_align -> {
-                flexboxLayout.alignItems = AlignItems.CENTER
-            }
-            R.id.baseline_align -> {
-                flexboxLayout.alignItems = AlignItems.BASELINE
-            }
-            R.id.stretch_align -> {
-                flexboxLayout.alignItems = AlignItems.STRETCH
-            }
-        }
-    }
-
-    private fun justifyContent() {
-        btnJustifyContent.setMenuListener(object : SimpleMenuListenerAdapter() {
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                justifyContentItemSelected(menuItem)
-                return true
-            }
-        })
-    }
-
-    private fun justifyContentItemSelected(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.flex_start -> {
-                flexboxLayout.justifyContent = JustifyContent.FLEX_START
-            }
-            R.id.flex_end -> {
-                flexboxLayout.justifyContent = JustifyContent.FLEX_END
-            }
-            R.id.center -> {
-                flexboxLayout.justifyContent = JustifyContent.CENTER
-            }
-            R.id.space_between -> {
-                flexboxLayout.justifyContent = JustifyContent.SPACE_BETWEEN
-            }
-            R.id.space_around -> {
-                flexboxLayout.justifyContent = JustifyContent.SPACE_AROUND
-            }
-        }
-    }
-
-    private fun flexWrap() {
-        btnFlexWrap.setMenuListener(object : SimpleMenuListenerAdapter() {
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                flexWrapItemSelected(menuItem)
-                return true
-            }
-        })
-    }
-
-    private fun flexWrapItemSelected(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.noWrap -> {
-                flexboxLayout.flexWrap = FlexWrap.NOWRAP
-            }
-            R.id.menuWrap -> {
-                flexboxLayout.flexWrap = FlexWrap.WRAP
-            }
-            R.id.wrapReverse -> {
-                flexboxLayout.flexWrap = FlexWrap.WRAP_REVERSE
-            }
-        }
-
-    }
-
-    private fun flexDirection() {
-        btnFlexDirection.setMenuListener(object : SimpleMenuListenerAdapter() {
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                flexDirectionItemSelected(menuItem)
-                return true
-            }
-        })
-    }
-
-    private fun flexDirectionItemSelected(menuItem: MenuItem) {
-        when (menuItem.itemId) {
-            R.id.row -> {
-                flexboxLayout.flexDirection = FlexDirection.ROW
-            }
-            R.id.row_reverse -> {
-                flexboxLayout.flexDirection = FlexDirection.ROW_REVERSE
-            }
-            R.id.column -> {
-                flexboxLayout.flexDirection = FlexDirection.COLUMN
-            }
-            R.id.column_reverse -> {
-                flexboxLayout.flexDirection = FlexDirection.COLUMN_REVERSE
-            }
-        }
-
     }
 
     private fun init() {
-        btnFlexDirection = findViewById(R.id.btnFlexDirection)
-        btnFlexWrap = findViewById(R.id.btnFlexWrap)
-        btnJustifyContent = findViewById(R.id.btnJustifyContent)
-        btnAlignItem = findViewById(R.id.btnAlignItem)
-        btnAlignContent = findViewById(R.id.btnAlignContent)
         topAppBar = findViewById(R.id.topAppBar)
+        imgPlay=findViewById(R.id.imgPlay)
+        txtPlay=findViewById(R.id.txtPlay)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.align_content_menu, menu)
+        menuInflater.inflate(R.menu.attribute_menu, menu)
         return true
     }
 
     override fun onMenuItemClick(item: MenuItem?): Boolean {
+        imgPlay.visibility= View.GONE
+        txtPlay.visibility=View.GONE
         Toast.makeText(this, "${item!!.title} selected", Toast.LENGTH_SHORT).show()
+        when(item?.itemId){
+            R.id.itemFlexDirection->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, FlexDirectionFragment())
+                    .commit()
+            }
+            R.id.itemFlexWrap->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, FlexWrapFragment())
+                    .commit()
+            }
+            R.id.itemJustifyContent->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, JustifyContentFragment())
+                    .commit()
+            }
+            R.id.itemAlignItem->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, AlignItemFragment())
+                    .commit()
+            }
+            R.id.itemAlignContent->{
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, AlignContentFragment())
+                    .commit()
+            }
+        }
         return false
 
     }

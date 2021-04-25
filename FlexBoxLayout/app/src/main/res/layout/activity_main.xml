@@ -18,13 +18,30 @@
             style="@style/Widget.MaterialComponents.Toolbar.PrimarySurface"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_500"
+            android:background="@color/green"
             android:elevation="0dp"
             app:menu="@menu/attribute_menu"
             app:subtitleTextColor="#ffffff"
-            app:title="Home"
+            app:title="FlexBox Layout"
             app:titleTextColor="#ffffff" />
     </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/lets_start"/>
+    <TextView
+        android:id="@+id/txtPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Play"
+        android:layout_below="@+id/imgPlay"
+        android:textSize="42sp"
+        android:textColor="@color/green"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackground"/>
 
     <FrameLayout
         android:id="@+id/frame"

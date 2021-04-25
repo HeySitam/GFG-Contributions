@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/flexbox_layout"
+            android:id="@+id/flexboxLayout3"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -43,7 +43,7 @@
             android:id="@+id/btnJustifyContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fabBackgroundTint="@color/purple_500"
+            app:fabBackgroundTint="@color/green"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             app:fabGravity="bottom_end"
