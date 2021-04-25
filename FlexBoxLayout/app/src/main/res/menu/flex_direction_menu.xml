@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/row"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Row" />
+    <item
+        android:id="@+id/row_reverse"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Row-Reverse" />
+    <item
+        android:id="@+id/column"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Column" />
+    <item
+        android:id="@+id/column_reverse"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Column-Reverse" />
+</menu>

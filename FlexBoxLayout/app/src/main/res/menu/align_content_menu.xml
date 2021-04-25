@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/flex_start_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Flex-Start" />
+    <item
+        android:id="@+id/flex_end_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Flex-End" />
+    <item
+        android:id="@+id/center_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Center" />
+    <item
+        android:id="@+id/space_between_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Space-Between" />
+    <item
+        android:id="@+id/space_around_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Space-Around" />
+</menu>

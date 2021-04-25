@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/itemFlexDirection"
+    android:title="Flex-Direction"/>
+    <item android:id="@+id/itemFlexWrap"
+        android:title="Flex-Wrap"/>
+    <item android:id="@+id/itemJustifyContent"
+        android:title="Justify-Content"/>
+    <item android:id="@+id/itemAlignItem"
+        android:title="Align-Item"/>
+    <item android:id="@+id/itemAlignContent"
+        android:title="Align-Content"/>
+</menu>
