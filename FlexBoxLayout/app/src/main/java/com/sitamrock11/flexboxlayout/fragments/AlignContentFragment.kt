@@ -52,6 +52,9 @@ class AlignContentFragment : Fragment() {
             R.id.space_around_content -> {
                 flexboxLayout.alignContent = AlignContent.SPACE_AROUND
             }
+            R.id.stretch_content -> {
+                flexboxLayout.alignContent = AlignContent.STRETCH
+            }
         }
     }
 

@@ -20,4 +20,8 @@
         android:id="@+id/space_around_content"
         android:icon="@android:drawable/ic_menu_slideshow"
         android:title="Space-Around" />
+    <item
+        android:id="@+id/stretch_content"
+        android:icon="@android:drawable/ic_menu_slideshow"
+        android:title="Stretch" />
 </menu>
