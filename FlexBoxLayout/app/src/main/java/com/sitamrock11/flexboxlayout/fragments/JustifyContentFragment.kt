@@ -52,6 +52,9 @@ class JustifyContentFragment : Fragment() {
             R.id.space_around -> {
                 flexboxLayout.justifyContent = JustifyContent.SPACE_AROUND
             }
+            R.id.space_evenly -> {
+                flexboxLayout.justifyContent = JustifyContent.SPACE_EVENLY
+            }
         }
     }
 
